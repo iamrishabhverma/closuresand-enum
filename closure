@@ -1,0 +1,38 @@
+import Foundation
+
+func Total() -> Int {
+    let a = 12
+    let b = 12
+    let c = 12
+    return(a+b+c)
+}
+
+//closure
+let sum = { (a : Int, b: Int, c: Int)-> Int in
+    
+    return (a+b+c)
+   
+}
+print(sum(3,4,5))
+let largest = {(a : Int , b: Int, c: Int)->Int in
+    
+    if(a > b && a > c){
+       print (a)
+        
+    }
+    else if (b>a && b>c){
+        print(b)
+    }
+    else{
+        print(c)
+    }
+return 0
+}
+print(largest(1,2,3))
+
+enum months: Int {
+    case january = 1,feb = 2,mar = 3,apr = 4,may = 5, june = 6,july = 7,august = 8,sept = 9,oct,nov,dec
+}
+let currentmonth = months.august
+print(currentmonth.rawValue)
+print(currentmonth)
